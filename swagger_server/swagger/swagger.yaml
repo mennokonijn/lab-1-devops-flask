@@ -9,8 +9,8 @@ info:
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   version: 1.0.0
 servers:
-  - url: https://virtserver.swaggerhub.com/tutorial/1.0.0
-    description: SwaggerHub API Auto Mocking
+- url: https://virtserver.swaggerhub.com/tutorial/1.0.0
+  description: SwaggerHub API Auto Mocking
 paths:
   /student/{student_id}:
     get:
@@ -78,7 +78,7 @@ paths:
               $ref: '#/components/schemas/Student'
         required: true
       responses:
-        "201":
+        "200":
           description: Created
           content:
             application/json:
@@ -97,9 +97,7 @@ components:
     Student:
       required:
       - first_name
-      - grade_records
       - last_name
-      - student_id
       type: object
       properties:
         student_id:

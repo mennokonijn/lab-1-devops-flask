@@ -74,8 +74,6 @@ class Student(Model):
         :param student_id: The student_id of this Student.
         :type student_id: float
         """
-        if student_id is None:
-            raise ValueError("Invalid value for `student_id`, must not be `None`")  # noqa: E501
 
         self._student_id = student_id
 
@@ -143,7 +141,5 @@ class Student(Model):
         :param grade_records: The grade_records of this Student.
         :type grade_records: List[GradeRecord]
         """
-        if grade_records is None:
-            raise ValueError("Invalid value for `grade_records`, must not be `None`")  # noqa: E501
 
         self._grade_records = grade_records
